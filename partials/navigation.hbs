@@ -5,10 +5,28 @@ Also it includes the big submenu.
 
 {{#if isSecondary}}
   <ul class="m-secondary-menu">
-    {{#foreach navigation}}
+    {{!-- {{#foreach navigation}}
       <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
         <a href="{{url absolute="true"}}">{{label}}</a>
       </li>
+    {{/foreach}} --}}
+    {{#foreach navigation}}
+      {{#if slug == 'sign-up'}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+          <a href="{{url absolute="true"}}">
+            {{#if @member}}
+              Account
+            {{else}}
+              {{label}}
+            {{/if}}
+          </a>
+        </li>
+      {{/if}}
+      {{else}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+          <a href="{{url absolute="true"}}">{{label}}</a>
+        </li>
+      {{/if}}
     {{/foreach}}
   </ul>
 {{else}}
