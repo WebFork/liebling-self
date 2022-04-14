@@ -17,7 +17,7 @@ Changed sizes in line 20 from sizes="(max-width: 600px) 600px, (max-width: 1000p
           {{img_url background size="l"}} 1000w,
           {{img_url background size="xl"}} 2000w
         "
-        sizes="2000px"
+        sizes="{{#is "post"}}2000px{{else}}(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px{{/is}}"
         src="{{img_url background size="l"}}"
         alt="{{feature_image_alt}}"
       />
