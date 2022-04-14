@@ -3,6 +3,10 @@ If the template in question has a background image, then we render responsive im
 for it, and apply those styles to the <header> tag.
 --}}
 
+{{!--
+Changed sizes in line 20 from sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px" to sizes="2000px"
+--}}
+
 {{#if background}}
   <section class="m-hero with-picture" data-aos="fade">
     <div class="m-hero__picture {{#is "post"}}in-post{{/is}}">
@@ -13,7 +17,7 @@ for it, and apply those styles to the <header> tag.
           {{img_url background size="l"}} 1000w,
           {{img_url background size="xl"}} 2000w
         "
-        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        sizes="2000px"
         src="{{img_url background size="l"}}"
         alt="{{feature_image_alt}}"
       />
