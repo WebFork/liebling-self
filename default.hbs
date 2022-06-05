@@ -113,6 +113,7 @@
 
 <body class="{{body_class}}">
   {{!-- LogRocket Identity --}}
+  {{!-- {{#if @member}}
   LogRocket.identify('{{@member.uuid}}', {
   name: '{{@member.name}}',
   email: '{{@member.email}}',
@@ -120,6 +121,7 @@
   // Add your own custom user variables here, ie:
   subscriptionType: '{{tier.name}}'
   });
+  {{/if}} --}}
   {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
   {{{body}}}
 
