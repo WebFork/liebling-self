@@ -53,7 +53,7 @@
     "jquery": "^3.6.0",
     "medium-zoom": "^1.0.6",
     "shave": "^2.5.10",
-    "swiper": "^8.0.3",
+    "swiper": "^8.2.5",
     "tippy.js": "^5.2.1"
   },
   "optionalDependencies": {
